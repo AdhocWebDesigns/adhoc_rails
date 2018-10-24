@@ -20,7 +20,7 @@ class PagesTest < ApplicationSystemTestCase
     fill_in "Page Title", with: @page.page_title
     fill_in "Published At", with: @page.published_at
     fill_in "Subheading", with: @page.subheading
-    fill_in "User Id", with: @page.user_id_id
+    fill_in "User", with: @page.user_id
     click_on "Create Page"
 
     assert_text "Page was successfully created"
@@ -37,7 +37,7 @@ class PagesTest < ApplicationSystemTestCase
     fill_in "Page Title", with: @page.page_title
     fill_in "Published At", with: @page.published_at
     fill_in "Subheading", with: @page.subheading
-    fill_in "User Id", with: @page.user_id_id
+    fill_in "User", with: @page.user_id
     click_on "Update Page"
 
     assert_text "Page was successfully updated"

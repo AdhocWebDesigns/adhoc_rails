@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user_id: one
+  user: one
   published_at: MyString
   page_title: MyString
   heading: MyString
@@ -10,7 +10,7 @@ one:
   images: one
 
 two:
-  user_id: two
+  user: two
   published_at: MyString
   page_title: MyString
   heading: MyString
