@@ -1,0 +1,62 @@
+<%= form_with(model: page, local: true) do |form| %>
+  <% if page.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(page.errors.count, "error") %> prohibited this page from being saved:</h2>
+
+      <ul>
+      <% page.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :author_id %>
+    <%= form.text_field :author_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :published_at %>
+    <%= form.text_field :published_at %>
+  </div>
+
+  <div class="field">
+    <%= form.label :page_title %>
+    <%= form.text_field :page_title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :heading %>
+    <%= form.text_field :heading %>
+  </div>
+
+  <div class="field">
+    <%= form.label :subheading %>
+    <%= form.text_field :subheading %>
+  </div>
+
+  <div class="field">
+    <%= form.label :contents %>
+    <%= form.text_area :contents %>
+  </div>
+
+  <div class="field">
+    <%= form.label :images_id %>
+    <%= form.text_field :images_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :parents_id %>
+    <%= form.text_field :parents_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :children_id %>
+    <%= form.text_field :children_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
