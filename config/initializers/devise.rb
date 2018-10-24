@@ -288,5 +288,5 @@ Devise.setup do |config|
      include Turbolinks::Controller
   end
 
-  config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
+#  config.omniauth :google, ENV['GOOGLE_KEY'], ENV['GOOGLE_SECRET'], scope: 'email,profile'
 end

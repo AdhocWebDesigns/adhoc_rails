@@ -38,7 +38,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap', '~> 4.1.3'
 gem "bootswatch", github: "thomaspark/bootswatch"
 gem 'devise'
-gem 'omniauth'
+#gem 'omniauth-google'
 gem 'activeadmin'
 gem 'google-cloud-storage'
 gem 'activemerchant'
