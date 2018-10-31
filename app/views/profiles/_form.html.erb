@@ -1,0 +1,227 @@
+<%= form_with(model: profile, local: true) do |form| %>
+  <% if profile.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(profile.errors.count, "error") %> prohibited this profile from being saved:</h2>
+
+      <ul>
+      <% profile.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :class_id %>
+    <%= form.text_field :class_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :background %>
+    <%= form.text_area :background %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dci %>
+    <%= form.number_field :dci %>
+  </div>
+
+  <div class="field">
+    <%= form.label :exp %>
+    <%= form.number_field :exp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alignment_id %>
+    <%= form.text_field :alignment_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :race_id %>
+    <%= form.text_field :race_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :char_name %>
+    <%= form.text_field :char_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inspire %>
+    <%= form.number_field :inspire %>
+  </div>
+
+  <div class="field">
+    <%= form.label :prof_bonus %>
+    <%= form.number_field :prof_bonus %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ac %>
+    <%= form.number_field :ac %>
+  </div>
+
+  <div class="field">
+    <%= form.label :init %>
+    <%= form.number_field :init %>
+  </div>
+
+  <div class="field">
+    <%= form.label :speed %>
+    <%= form.number_field :speed %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hp %>
+    <%= form.number_field :hp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :temp_hp %>
+    <%= form.number_field :temp_hp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hit_die %>
+    <%= form.number_field :hit_die %>
+  </div>
+
+  <div class="field">
+    <%= form.label :deathsave_s %>
+    <%= form.number_field :deathsave_s %>
+  </div>
+
+  <div class="field">
+    <%= form.label :deathsave_f %>
+    <%= form.number_field :deathsave_f %>
+  </div>
+
+  <div class="field">
+    <%= form.label :skills_id %>
+    <%= form.text_field :skills_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :stats_id %>
+    <%= form.text_field :stats_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :personality %>
+    <%= form.text_area :personality %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ideals %>
+    <%= form.text_area :ideals %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bonds %>
+    <%= form.text_area :bonds %>
+  </div>
+
+  <div class="field">
+    <%= form.label :flaws %>
+    <%= form.text_area :flaws %>
+  </div>
+
+  <div class="field">
+    <%= form.label :faction_id %>
+    <%= form.text_field :faction_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :spells_id %>
+    <%= form.text_field :spells_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :attacks_id %>
+    <%= form.text_field :attacks_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inventory_id %>
+    <%= form.text_field :inventory_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :profs %>
+    <%= form.text_area :profs %>
+  </div>
+
+  <div class="field">
+    <%= form.label :langs_id %>
+    <%= form.text_field :langs_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :features %>
+    <%= form.text_area :features %>
+  </div>
+
+  <div class="field">
+    <%= form.label :traits %>
+    <%= form.text_area :traits %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.number_field :age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :height %>
+    <%= form.number_field :height %>
+  </div>
+
+  <div class="field">
+    <%= form.label :weight %>
+    <%= form.number_field :weight %>
+  </div>
+
+  <div class="field">
+    <%= form.label :eyes %>
+    <%= form.text_field :eyes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :skin %>
+    <%= form.text_field :skin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hair %>
+    <%= form.text_field :hair %>
+  </div>
+
+  <div class="field">
+    <%= form.label :backstory %>
+    <%= form.text_area :backstory %>
+  </div>
+
+  <div class="field">
+    <%= form.label :total_ncm %>
+    <%= form.number_field :total_ncm %>
+  </div>
+
+  <div class="field">
+    <%= form.label :treasure_id %>
+    <%= form.text_field :treasure_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pass_wisdom %>
+    <%= form.number_field :pass_wisdom %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

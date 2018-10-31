@@ -1,0 +1,109 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Profiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Class</th>
+      <th>Background</th>
+      <th>Dci</th>
+      <th>Exp</th>
+      <th>Alignment</th>
+      <th>Race</th>
+      <th>Char name</th>
+      <th>Inspire</th>
+      <th>Prof bonus</th>
+      <th>Ac</th>
+      <th>Init</th>
+      <th>Speed</th>
+      <th>Hp</th>
+      <th>Temp hp</th>
+      <th>Hit die</th>
+      <th>Deathsave s</th>
+      <th>Deathsave f</th>
+      <th>Skills</th>
+      <th>Stats</th>
+      <th>Personality</th>
+      <th>Ideals</th>
+      <th>Bonds</th>
+      <th>Flaws</th>
+      <th>Faction</th>
+      <th>Spells</th>
+      <th>Attacks</th>
+      <th>Inventory</th>
+      <th>Profs</th>
+      <th>Langs</th>
+      <th>Features</th>
+      <th>Traits</th>
+      <th>Age</th>
+      <th>Height</th>
+      <th>Weight</th>
+      <th>Eyes</th>
+      <th>Skin</th>
+      <th>Hair</th>
+      <th>Backstory</th>
+      <th>Total ncm</th>
+      <th>Treasure</th>
+      <th>Pass wisdom</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @profiles.each do |profile| %>
+      <tr>
+        <td><%= profile.user %></td>
+        <td><%= profile.class %></td>
+        <td><%= profile.background %></td>
+        <td><%= profile.dci %></td>
+        <td><%= profile.exp %></td>
+        <td><%= profile.alignment %></td>
+        <td><%= profile.race %></td>
+        <td><%= profile.char_name %></td>
+        <td><%= profile.inspire %></td>
+        <td><%= profile.prof_bonus %></td>
+        <td><%= profile.ac %></td>
+        <td><%= profile.init %></td>
+        <td><%= profile.speed %></td>
+        <td><%= profile.hp %></td>
+        <td><%= profile.temp_hp %></td>
+        <td><%= profile.hit_die %></td>
+        <td><%= profile.deathsave_s %></td>
+        <td><%= profile.deathsave_f %></td>
+        <td><%= profile.skills %></td>
+        <td><%= profile.stats %></td>
+        <td><%= profile.personality %></td>
+        <td><%= profile.ideals %></td>
+        <td><%= profile.bonds %></td>
+        <td><%= profile.flaws %></td>
+        <td><%= profile.faction %></td>
+        <td><%= profile.spells %></td>
+        <td><%= profile.attacks %></td>
+        <td><%= profile.inventory %></td>
+        <td><%= profile.profs %></td>
+        <td><%= profile.langs %></td>
+        <td><%= profile.features %></td>
+        <td><%= profile.traits %></td>
+        <td><%= profile.age %></td>
+        <td><%= profile.height %></td>
+        <td><%= profile.weight %></td>
+        <td><%= profile.eyes %></td>
+        <td><%= profile.skin %></td>
+        <td><%= profile.hair %></td>
+        <td><%= profile.backstory %></td>
+        <td><%= profile.total_ncm %></td>
+        <td><%= profile.treasure %></td>
+        <td><%= profile.pass_wisdom %></td>
+        <td><%= link_to 'Show', profile %></td>
+        <td><%= link_to 'Edit', edit_profile_path(profile) %></td>
+        <td><%= link_to 'Destroy', profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Profile', new_profile_path %>

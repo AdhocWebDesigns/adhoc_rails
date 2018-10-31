@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @saving_throw.name %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @saving_throw.desc %>
+</p>
+
+<%= link_to 'Edit', edit_saving_throw_path(@saving_throw) %> |
+<%= link_to 'Back', saving_throws_path %>

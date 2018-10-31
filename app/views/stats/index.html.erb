@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Stats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Str</th>
+      <th>Dex</th>
+      <th>Con</th>
+      <th>Int</th>
+      <th>Wis</th>
+      <th>Cha</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @stats.each do |stat| %>
+      <tr>
+        <td><%= stat.user %></td>
+        <td><%= stat.str %></td>
+        <td><%= stat.dex %></td>
+        <td><%= stat.con %></td>
+        <td><%= stat.int %></td>
+        <td><%= stat.wis %></td>
+        <td><%= stat.cha %></td>
+        <td><%= link_to 'Show', stat %></td>
+        <td><%= link_to 'Edit', edit_stat_path(stat) %></td>
+        <td><%= link_to 'Destroy', stat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Stat', new_stat_path %>

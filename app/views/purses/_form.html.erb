@@ -1,0 +1,47 @@
+<%= form_with(model: purse, local: true) do |form| %>
+  <% if purse.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(purse.errors.count, "error") %> prohibited this purse from being saved:</h2>
+
+      <ul>
+      <% purse.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cp %>
+    <%= form.number_field :cp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sp %>
+    <%= form.number_field :sp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ep %>
+    <%= form.number_field :ep %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gp %>
+    <%= form.number_field :gp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pp %>
+    <%= form.number_field :pp %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

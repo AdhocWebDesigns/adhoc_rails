@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Val:</strong>
+  <%= @alignment.val %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @alignment.name %>
+</p>
+
+<p>
+  <strong>Descr:</strong>
+  <%= @alignment.descr %>
+</p>
+
+<%= link_to 'Edit', edit_alignment_path(@alignment) %> |
+<%= link_to 'Back', alignments_path %>

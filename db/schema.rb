@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_26_185318) do
+ActiveRecord::Schema.define(version: 2018_10_31_041043) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -59,62 +59,186 @@ ActiveRecord::Schema.define(version: 2018_10_26_185318) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
-  create_table "articles", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "subpage_id"
-    t.string "link"
-    t.string "title"
-    t.string "subtitle"
-    t.string "heading"
-    t.string "subheading"
-    t.integer "weight"
-    t.text "body"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["subpage_id"], name: "index_articles_on_subpage_id"
-    t.index ["user_id"], name: "index_articles_on_user_id"
-  end
-
-  create_table "homes", force: :cascade do |t|
-    t.string "link"
-    t.string "title"
-    t.string "subtitle"
-    t.string "heading"
-    t.string "subheading"
-    t.integer "weight"
-    t.text "body"
+  create_table "alignments", force: :cascade do |t|
+    t.integer "val"
+    t.string "name"
+    t.string "descr"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "pages", force: :cascade do |t|
-    t.integer "user_id"
-    t.string "link"
-    t.string "title"
-    t.string "subtitle"
-    t.string "heading"
-    t.string "subheading"
-    t.integer "weight"
-    t.text "body"
+  create_table "dnd_classes", force: :cascade do |t|
+    t.string "name"
+    t.string "desc"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_pages_on_user_id"
   end
 
-  create_table "subpages", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "page_id"
-    t.string "link"
-    t.string "title"
-    t.string "subtitle"
-    t.string "heading"
-    t.string "subheading"
-    t.integer "weight"
-    t.text "body"
+  create_table "factions", force: :cascade do |t|
+    t.string "name"
+    t.text "desc"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["page_id"], name: "index_subpages_on_page_id"
-    t.index ["user_id"], name: "index_subpages_on_user_id"
+  end
+
+  create_table "games", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "name"
+    t.string "description"
+    t.integer "photo_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["photo_id"], name: "index_games_on_photo_id"
+    t.index ["user_id"], name: "index_games_on_user_id"
+  end
+
+  create_table "inventories", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "items_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["items_id"], name: "index_inventories_on_items_id"
+    t.index ["user_id"], name: "index_inventories_on_user_id"
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "name"
+    t.integer "qty"
+    t.string "description"
+    t.integer "value_sp"
+    t.integer "weight"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_items_on_user_id"
+  end
+
+  create_table "langs", force: :cascade do |t|
+    t.string "name"
+    t.text "desc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.string "caption"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_photos_on_user_id"
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "class_id"
+    t.text "background"
+    t.integer "dci"
+    t.integer "exp"
+    t.integer "alignment_id"
+    t.integer "race_id"
+    t.string "char_name"
+    t.integer "inspire"
+    t.integer "prof_bonus"
+    t.integer "ac"
+    t.integer "init"
+    t.integer "speed"
+    t.integer "hp"
+    t.integer "temp_hp"
+    t.integer "hit_die"
+    t.integer "deathsave_s"
+    t.integer "deathsave_f"
+    t.integer "skills_id"
+    t.integer "stats_id"
+    t.text "personality"
+    t.text "ideals"
+    t.text "bonds"
+    t.text "flaws"
+    t.integer "faction_id"
+    t.integer "spells_id"
+    t.integer "attacks_id"
+    t.integer "inventory_id"
+    t.text "profs"
+    t.integer "langs_id"
+    t.text "features"
+    t.text "traits"
+    t.integer "age"
+    t.integer "height"
+    t.integer "weight"
+    t.string "eyes"
+    t.string "skin"
+    t.string "hair"
+    t.text "backstory"
+    t.integer "total_ncm"
+    t.integer "treasure_id"
+    t.integer "pass_wisdom"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["alignment_id"], name: "index_profiles_on_alignment_id"
+    t.index ["attacks_id"], name: "index_profiles_on_attacks_id"
+    t.index ["class_id"], name: "index_profiles_on_class_id"
+    t.index ["faction_id"], name: "index_profiles_on_faction_id"
+    t.index ["inventory_id"], name: "index_profiles_on_inventory_id"
+    t.index ["langs_id"], name: "index_profiles_on_langs_id"
+    t.index ["race_id"], name: "index_profiles_on_race_id"
+    t.index ["skills_id"], name: "index_profiles_on_skills_id"
+    t.index ["spells_id"], name: "index_profiles_on_spells_id"
+    t.index ["stats_id"], name: "index_profiles_on_stats_id"
+    t.index ["treasure_id"], name: "index_profiles_on_treasure_id"
+    t.index ["user_id"], name: "index_profiles_on_user_id"
+  end
+
+  create_table "purses", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "cp"
+    t.integer "sp"
+    t.integer "ep"
+    t.integer "gp"
+    t.integer "pp"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_purses_on_user_id"
+  end
+
+  create_table "races", force: :cascade do |t|
+    t.string "desc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "saving_throws", force: :cascade do |t|
+    t.string "name"
+    t.string "desc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "skills", force: :cascade do |t|
+    t.string "name"
+    t.string "desc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "stats", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "str"
+    t.integer "dex"
+    t.integer "con"
+    t.integer "int"
+    t.integer "wis"
+    t.integer "cha"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_stats_on_user_id"
+  end
+
+  create_table "treasures", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "items_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["items_id"], name: "index_treasures_on_items_id"
+    t.index ["user_id"], name: "index_treasures_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

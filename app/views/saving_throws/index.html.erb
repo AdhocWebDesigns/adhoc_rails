@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Saving Throws</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Desc</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @saving_throws.each do |saving_throw| %>
+      <tr>
+        <td><%= saving_throw.name %></td>
+        <td><%= saving_throw.desc %></td>
+        <td><%= link_to 'Show', saving_throw %></td>
+        <td><%= link_to 'Edit', edit_saving_throw_path(saving_throw) %></td>
+        <td><%= link_to 'Destroy', saving_throw, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Saving Throw', new_saving_throw_path %>
