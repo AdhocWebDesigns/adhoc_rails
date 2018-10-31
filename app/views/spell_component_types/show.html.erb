@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @spell_component_type.name %>
+</p>
+
+<p>
+  <strong>Symbol:</strong>
+  <%= @spell_component_type.symbol %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @spell_component_type.desc %>
+</p>
+
+<%= link_to 'Edit', edit_spell_component_type_path(@spell_component_type) %> |
+<%= link_to 'Back', spell_component_types_path %>

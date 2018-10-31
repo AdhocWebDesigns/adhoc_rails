@@ -1,0 +1,3 @@
+class Armour < ApplicationRecord
+
+end

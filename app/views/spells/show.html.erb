@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @spell.level %>
+</p>
+
+<p>
+  <strong>Cast time:</strong>
+  <%= @spell.cast_time %>
+</p>
+
+<p>
+  <strong>Range:</strong>
+  <%= @spell.range %>
+</p>
+
+<p>
+  <strong>Components:</strong>
+  <%= @spell.components %>
+</p>
+
+<p>
+  <strong>Duration:</strong>
+  <%= @spell.duration %>
+</p>
+
+<p>
+  <strong>Spell school:</strong>
+  <%= @spell.spell_school %>
+</p>
+
+<p>
+  <strong>Attack save:</strong>
+  <%= @spell.attack_save %>
+</p>
+
+<p>
+  <strong>Damage effect:</strong>
+  <%= @spell.damage_effect %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @spell.name %>
+</p>
+
+<p>
+  <strong>Dnd classes:</strong>
+  <%= @spell.dnd_classes %>
+</p>
+
+<p>
+  <strong>Desc:</strong>
+  <%= @spell.desc %>
+</p>
+
+<%= link_to 'Edit', edit_spell_path(@spell) %> |
+<%= link_to 'Back', spells_path %>

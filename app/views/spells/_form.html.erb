@@ -1,0 +1,72 @@
+<%= form_with(model: spell, local: true) do |form| %>
+  <% if spell.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(spell.errors.count, "error") %> prohibited this spell from being saved:</h2>
+
+      <ul>
+      <% spell.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :level %>
+    <%= form.number_field :level %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cast_time %>
+    <%= form.number_field :cast_time %>
+  </div>
+
+  <div class="field">
+    <%= form.label :range %>
+    <%= form.number_field :range %>
+  </div>
+
+  <div class="field">
+    <%= form.label :components_id %>
+    <%= form.text_field :components_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :duration %>
+    <%= form.number_field :duration %>
+  </div>
+
+  <div class="field">
+    <%= form.label :spell_school_id %>
+    <%= form.text_field :spell_school_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :attack_save %>
+    <%= form.text_field :attack_save %>
+  </div>
+
+  <div class="field">
+    <%= form.label :damage_effect_id %>
+    <%= form.text_field :damage_effect_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dnd_classes_id %>
+    <%= form.text_field :dnd_classes_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :desc %>
+    <%= form.text_area :desc %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

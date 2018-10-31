@@ -1,4 +1,3 @@
 class Treasure < ApplicationRecord
-  belongs_to :user
-  belongs_to :items
+  belongs_to :profile
 end

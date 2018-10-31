@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  level: 1
+  cast_time: 1
+  range: 1
+  components: one
+  duration: 1
+  spell_school: one
+  attack_save: MyString
+  damage_effect: one
+  name: MyString
+  dnd_classes: one
+  desc: MyText
+
+two:
+  level: 1
+  cast_time: 1
+  range: 1
+  components: two
+  duration: 1
+  spell_school: two
+  attack_save: MyString
+  damage_effect: two
+  name: MyString
+  dnd_classes: two
+  desc: MyText

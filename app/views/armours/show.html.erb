@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @armour.user %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @armour.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @armour.description %>
+</p>
+
+<p>
+  <strong>Ac:</strong>
+  <%= @armour.ac %>
+</p>
+
+<p>
+  <strong>Strength:</strong>
+  <%= @armour.strength %>
+</p>
+
+<p>
+  <strong>Stealth:</strong>
+  <%= @armour.stealth %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @armour.weight %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @armour.value %>
+</p>
+
+<%= link_to 'Edit', edit_armour_path(@armour) %> |
+<%= link_to 'Back', armours_path %>

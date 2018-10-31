@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  w_type: MyString
+  name: MyString
+  description: MyString
+  damage: 
+  d_type: one
+  weight: 
+  value: 
+  w_prop: one
+
+two:
+  user: two
+  w_type: MyString
+  name: MyString
+  description: MyString
+  damage: 
+  d_type: two
+  weight: 
+  value: 
+  w_prop: two

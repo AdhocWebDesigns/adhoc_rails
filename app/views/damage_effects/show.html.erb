@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @damage_effect.name %>
+</p>
+
+<p>
+  <strong>Value:</strong>
+  <%= @damage_effect.value %>
+</p>
+
+<%= link_to 'Edit', edit_damage_effect_path(@damage_effect) %> |
+<%= link_to 'Back', damage_effects_path %>

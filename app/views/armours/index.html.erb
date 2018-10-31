@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Armours</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Ac</th>
+      <th>Strength</th>
+      <th>Stealth</th>
+      <th>Weight</th>
+      <th>Value</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @armours.each do |armour| %>
+      <tr>
+        <td><%= armour.user %></td>
+        <td><%= armour.name %></td>
+        <td><%= armour.description %></td>
+        <td><%= armour.ac %></td>
+        <td><%= armour.strength %></td>
+        <td><%= armour.stealth %></td>
+        <td><%= armour.weight %></td>
+        <td><%= armour.value %></td>
+        <td><%= link_to 'Show', armour %></td>
+        <td><%= link_to 'Edit', edit_armour_path(armour) %></td>
+        <td><%= link_to 'Destroy', armour, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Armour', new_armour_path %>

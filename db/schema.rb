@@ -148,7 +148,7 @@ ActiveRecord::Schema.define(version: 2018_10_31_041043) do
     t.integer "deathsave_s"
     t.integer "deathsave_f"
     t.integer "skills_id"
-    t.integer "stats_id"
+    t.integer "stat_id"
     t.text "personality"
     t.text "ideals"
     t.text "bonds"

@@ -1,7 +1,7 @@
 class CreateStats < ActiveRecord::Migration[5.2]
   def change
     create_table :stats do |t|
-      t.references :user, foreign_key: true
+      t.references :profile, foreign_key: true
       t.integer :str
       t.integer :dex
       t.integer :con

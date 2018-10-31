@@ -1,0 +1,2 @@
+class DamageEffect < ApplicationRecord
+end

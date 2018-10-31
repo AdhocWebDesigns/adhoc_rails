@@ -1,4 +1,13 @@
 Rails.application.routes.draw do
+  resources :weapon_types
+  resources :spells
+  resources :damage_effects
+  resources :spell_components
+  resources :spell_schools
+  resources :spell_component_types
+  resources :weapons
+  resources :armours
+  resources :damage_types
   resources :treasures
   resources :langs
   resources :factions

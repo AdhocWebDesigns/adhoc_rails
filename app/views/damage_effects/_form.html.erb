@@ -1,0 +1,27 @@
+<%= form_with(model: damage_effect, local: true) do |form| %>
+  <% if damage_effect.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(damage_effect.errors.count, "error") %> prohibited this damage_effect from being saved:</h2>
+
+      <ul>
+      <% damage_effect.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :value %>
+    <%= form.text_field :value %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

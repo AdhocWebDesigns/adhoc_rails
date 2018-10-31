@@ -1,0 +1,57 @@
+<%= form_with(model: armour, local: true) do |form| %>
+  <% if armour.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(armour.errors.count, "error") %> prohibited this armour from being saved:</h2>
+
+      <ul>
+      <% armour.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ac %>
+    <%= form.number_field :ac %>
+  </div>
+
+  <div class="field">
+    <%= form.label :strength %>
+    <%= form.number_field :strength %>
+  </div>
+
+  <div class="field">
+    <%= form.label :stealth %>
+    <%= form.number_field :stealth %>
+  </div>
+
+  <div class="field">
+    <%= form.label :weight %>
+    <%= form.text_field :weight %>
+  </div>
+
+  <div class="field">
+    <%= form.label :value %>
+    <%= form.text_field :value %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
