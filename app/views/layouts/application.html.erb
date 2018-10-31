@@ -21,12 +21,6 @@
     <footer class="text-muted">
       <div class="container">
         <p class="float-left"><%= @site_title %> &copy; 2018</p>
-        <% @pa = Page.where(link: "About").first %>
-        <% @pb = Subpage.where(link: "Blog").first %>
-        <% if @pa != nil && @pb != nil%>
-            <p>Checkout the <% link_to @pa.link pa %> page or read my <% link_to @pb.link @pb %>.</p>
-        <% else %>
-        <% end %>
       </div>
     </footer>
     </main>
